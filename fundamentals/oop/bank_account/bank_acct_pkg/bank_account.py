@@ -40,10 +40,11 @@ class BankAccount:
             account.display_account_info()
 
 # TESTING BANKACCOUNT CLASS #
-user_1 = BankAccount(.05, 7000)
-user_2 = BankAccount(.03, 50050)
+if __name__ == "__main__":
+    user_1 = BankAccount(.05, 7000)
+    user_2 = BankAccount(.03, 50050)
 
-user_1.deposit(100).deposit(200).deposit(300).withdraw(100).yield_interest().display_account_info()
-user_2.deposit(200).deposit(400).withdraw(80).withdraw(30).withdraw(10).withdraw(12000).yield_interest().display_account_info()
+    user_1.deposit(100).deposit(200).deposit(300).withdraw(100).yield_interest().display_account_info()
+    user_2.deposit(200).deposit(400).withdraw(80).withdraw(30).withdraw(10).withdraw(12000).yield_interest().display_account_info()
 
-BankAccount.all_balances()
+    BankAccount.all_balances()
