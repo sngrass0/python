@@ -26,9 +26,11 @@ class Deck:
     def show_cards(self):
         for card in self.cards:
             card.card_info()
+        return self
     
     def shuffle_deck(self):
         random.shuffle(self.cards)
+        return self
     
     def draw_card(self,amount):
         draw = []
@@ -36,4 +38,8 @@ class Deck:
             card = self.cards.pop()
             draw.append(card)
         return draw
+    
+    def cards_left(self):
+        print(f"there are {len(self.cards)} cards left")
+        return self
 

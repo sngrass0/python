@@ -8,7 +8,14 @@ max_cards = 7
 player_1 = Player(pool.draw_card(max_cards))
 player_2 = Player(pool.draw_card(max_cards))
 
-    
+pool.cards_left()
+Player.all_players_hands()
+
+matches = player_2.has_card(player_1.hand[0])
+if len(matches) > 0:
+    print("found a match!")
+else:
+    print("go fish")
 
 # making a go fish game
 # [DONE] shuffle deck

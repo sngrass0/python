@@ -1,10 +1,10 @@
 class Player:
-    def __init__(self, info):
+    def __init__(self, data):
         # CHALLENGE 1
-        self.name = info["name"]
-        self.age = info["age"]
-        self.position = info["position"]
-        self.team = info["team"]
+        self.name = data["name"]
+        self.age = data["age"]
+        self.position = data["position"]
+        self.team = data["team"]
 
     def display_info(self):
         print(self.name)
