@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    margin-top: 200px;
+    padding: 30px;
+    color: rgb(58, 44, 44);
+}
+
+.button-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+
+.btn-clr-1 {
+    background-color: gray;
+    color: white
+}
+
+.btn-clr-1:hover {
+    background-color: rgb(87, 172, 203);
+    color: white
+}
+
+.highlight-num {
+    color: rgb(87, 172, 203);
+}
