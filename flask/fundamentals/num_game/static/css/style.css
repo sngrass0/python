@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form-box {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.answer-box {
+    margin: auto;
+    width: 50%;
+    max-width: 600px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.correct {
+    color: azure;
+    background-color: rgb(79, 200, 79);
+}
+
+.wrong {
+    color: azure;
+    background-color: rgb(172, 37, 37);
+}
