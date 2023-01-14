@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.user-box {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    min-width: 500px;
+}
+
+.form-box {
+    width: 50%;
+    min-width: 500px;
+}
