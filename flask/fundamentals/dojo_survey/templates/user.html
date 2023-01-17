@@ -13,44 +13,56 @@
         <div class="container">
             <div class="form-control">
                 <h3>Submitted Info</h3>
-                <div class="row my-2">
-                    <div class="col">
-                    Name:
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                        Name:
+                        </div>
+                        <div class="col">
+                        {{ session['name'] }}
+                        </div>
                     </div>
-                    <div class="col">
-                    {{ name }}
+                    <div class="row my-2">
+                        <div class="col">
+                        Location:
+                        </div>
+                        <div class="col">
+                        {{ session['location'] }}
+                        </div>
                     </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col">
-                    Location:
+                    <div class="row my-2">
+                        <div class="col">
+                        Favorite Language:
+                        </div>
+                        <div class="col">
+                        {{ session['language'] }}
+                        </div>
                     </div>
-                    <div class="col">
-                    {{ location }}
+                    <div class="row my-2">
+                        <div class="col">
+                        Operating System:
+                        </div>
+                        <div class="col">
+                        {{ session['os'] }}
+                        </div>
                     </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col">
-                    Favorite Language:
+                    <div class="row my-2">
+                        <div class="col">
+                        Favorite Colors:
+                        </div>
+                        <div class="col">
+                        {% for color in session['colors'] %}
+                            <span class="color" style="background-color: {{ color }};"> </span>
+                        {% endfor %}
+                        </div>
                     </div>
-                    <div class="col">
-                    {{ language }}
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col">
-                    Operating System:
-                    </div>
-                    <div class="col">
-                    {{ os }}
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col">
-                    Comments:
-                    </div>
-                    <div class="col">
-                    {{ comment }}
+                    <div class="row my-2">
+                        <div class="col">
+                        Comments:
+                        </div>
+                        <div class="col">
+                        {{ session['comments'] }}
+                        </div>
                     </div>
                 </div>
                 <a class="btn btn-secondary mb-2" href="/" role="button">Back</a>

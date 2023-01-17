@@ -9,6 +9,7 @@ def index():
 
 @app.route('/results', methods=['POST'])
 def display_results():
+    print(request.form.getlist('color'))
     # name
     if request.form['name'] == "":
         session['name'] = "Guest"
@@ -22,10 +23,10 @@ def display_results():
     session['comment'] = request.form['comment']
     # os
     session['os'] = request.form['os']
-    # render templaye
-    return render_template('user.html', name = session['name'], 
-    location = session['location'], language = session['language'], 
-    comment = session['comment'], os = session['os'])
+    # color
+    session['colors'] =  request.form.getlist('color');
+    # render template
+    return render_template('user.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

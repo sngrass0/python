@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Zilla Slab', serif;
 }
 
 .user-box {
@@ -13,4 +16,11 @@
 .form-box {
     width: 50%;
     min-width: 500px;
+}
+
+.color {
+    background-color: red;
+    padding: 0px 10px;
+    margin-right: 10px;
+    border-radius: 2px;
 }
