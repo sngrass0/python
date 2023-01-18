@@ -25,3 +25,7 @@
     color: azure;
     background-color: rgb(172, 37, 37);
 }
+
+.data {
+    text-align: center !important;
+}

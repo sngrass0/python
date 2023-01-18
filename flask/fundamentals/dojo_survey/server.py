@@ -7,8 +7,12 @@ app.secret_key = "In the name of the moon I'll punish YOU"
 def index():
     return render_template('index.html')
 
-@app.route('/results', methods=['POST'])
+@app.route('/user')
 def display_results():
+    return render_template('user.html')
+
+@app.route('/results', methods=['POST'])
+def results():
     print(request.form.getlist('color'))
     # name
     if request.form['name'] == "":
@@ -26,7 +30,7 @@ def display_results():
     # color
     session['colors'] =  request.form.getlist('color');
     # render template
-    return render_template('user.html')
+    return redirect('/user')
 
 if __name__ == "__main__":
     app.run(debug=True)

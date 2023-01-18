@@ -1,0 +1,9 @@
+SELECT * FROM names.names;
+
+-- inserts new name into the database
+INSERT INTO names.names (name)
+VALUES ("Stephanie Grasso");
+
+-- insert multiple names
+INSERT INTO names.names (name)
+VALUES ("Alyssa Grasso"), ("Alexandria Grasso");

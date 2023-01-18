@@ -5,11 +5,12 @@ app.secret_key = "In the name of the moon I'll punish YOU"
 
 @app.route('/')
 def index():
+    # keep track of count
     if 'count' in session:
         session['count'] += 1
     else:
         session['count'] = 1
-
+    # keep track of views
     if 'views' in session:
         session['views'] += 1
     else:

@@ -1,0 +1,53 @@
+SELECT * FROM dojos;
+
+-- Query: Create 3 new dojos
+
+INSERT INTO dojos (name)
+VALUES('Online');
+INSERT INTO dojos (name)
+VALUES('Full-Time');
+INSERT INTO dojos (name)
+VALUES('Part-Time');
+
+-- Query: Delete the 3 dojos you just created
+
+DELETE FROM dojos WHERE id = 1;
+DELETE FROM dojos WHERE id = 2;
+DELETE FROM dojos WHERE id = 3;
+
+-- Query: Create 3 more dojos
+
+INSERT INTO dojos (name)
+VALUES('Burbank');
+INSERT INTO dojos (name)
+VALUES('San Jose'), ('Seattle');
+
+-- Query: Create 3 ninjas that belong to the first dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Stephanie', 'Grasso', 23, 11);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Hamzeh', 'Samhouri', 23, 11);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Veronika', 'Kontogiannopoulos', 23, 11);
+
+-- Query: Create 3 ninjas that belong to the second dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Alyssa', 'Grasso', 23, 12);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Alexandria', 'Grasso', 23, 12);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Andrew', 'Grasso', 23, 12);
+
+-- Query: Create 3 ninjas that belong to the third dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Mikee', 'Aberin', 23, 13);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Melone', 'Aberin', 23, 13);
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('Monica', 'Aberin', 23, 13);
+
+-- Query: Retrieve all the ninjas from the first dojo
+
+SELECT * FROM ninjas WHERE dojo_id = (SELECT id FROM dojos ORDER BY id ASC LIMIT 1);
+
+-- Query: Retrieve all the ninjas from the last dojo
+
+SELECT * FROM ninjas WHERE dojo_id = (SELECT id FROM dojos ORDER BY id DESC LIMIT 1);
+
+-- Query: Retrieve the last ninja's dojo
+
+SELECT * FROM dojos WHERE id = (SELECT dojo_id FROM ninjas ORDER BY id DESC LIMIT 1);
