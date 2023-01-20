@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 70%;
+    min-width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    border: 2px solid rgb(64, 62, 62);
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(179, 176, 176);
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+}
+
+.box h1 {
+    margin-bottom: 20px;
+}
+
+.author-list ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    border: 1px dashed black;
+    border-radius: 5px;
+}
+
+.author-list li {
+    margin: 20px 10px;
+}
+
+.author-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.author-list a:hover {
+    font-weight: bolder;
+}
+
+
