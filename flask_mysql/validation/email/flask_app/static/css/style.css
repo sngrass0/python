@@ -1,0 +1,34 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.user-box {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    min-width: 700px;
+}
+
+.form-box {
+    width: 50%;
+    min-width: 700px;
+}
+
+.success {
+    background-color: rgb(95, 192, 100);
+    text-align: center;
+    color: rgb(25, 42, 29);
+    font-size: 1.5em;
+    box-shadow: 5px 5px rgb(58, 134, 113);
+}
+
+.error {
+    background-color: rgb(185, 40, 40);
+    text-align: center;
+    color: rgb(235, 230, 230);
+    font-size: 1.5em;
+    box-shadow: 5px 5px rgb(88, 26, 26);
+    padding-top: 10px;
+}
