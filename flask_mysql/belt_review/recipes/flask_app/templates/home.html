@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-3">
+        <h1>Welcome, {{ session['first_name'] }}</h1>
+        <div class="d-flex justify-content-between">
+            <div class="p-2">
+                <h3>All posted recipes:</h3>
+            </div>
+            <div class="p-2 d-flex gap-3">
+                <a href="/recipes/new">Create new</a>
+                <a href="/users/logout">Logout</a>
+            </div>
+        </div>
+        <div class="row">
+            <!-- table -->
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <th scope="col">Name</th>
+                    <th scope="col">Under</th>
+                    <th scope="col">Posted By</th>
+                    <th scope="col">Actions</th>
+                </thead>
+                {% if recipes %}
+                    {% for recipe in recipes  %}
+                        <tr>
+                            <td>
+                                {{ recipe.name }}
+                            </td>
+                            <td>
+                                {{ recipe.under }}
+                            </td>
+                            <td>
+                                {{ recipe.author }}
+                            </td>
+                            <td>
+                                <a href="/recipes/{{ recipe.id }}">
+                                    view recipe
+                                </a>
+                                {% if session['user_id'] == recipe.user_id %}
+                                    | <a href="/recipes/edit/{{ recipe.id }}">Edit</a> | <a href="/recipes/delete/{{ recipe.id }}">Delete</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}           
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
